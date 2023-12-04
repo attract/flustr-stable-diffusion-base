@@ -37,4 +37,3 @@ RUN . ~/miniconda3/bin/activate \
 RUN . ~/miniconda3/bin/activate \
     && pip install git+https://github.com/facebookresearch/xformers.git
 
-WORKDIR /app
