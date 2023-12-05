@@ -12,11 +12,6 @@ RUN bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 RUN rm -rf ~/miniconda3/miniconda.sh
 RUN ~/miniconda3/bin/conda init bash
 
-# Install ffmpeg
-RUN ~/miniconda3/bin/conda install -c conda-forge x264=='1!161.3030' ffmpeg=4.4.0 \
-    && export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1 \
-    && ~/miniconda3/bin/conda install cryptography
-
 # Install python and stablediffusion
 RUN ~/miniconda3/bin/conda install -y python=3.8.17
 RUN ~/miniconda3/bin/conda install -y pytorch==1.12.1 torchvision==0.13.1 -c pytorch
@@ -37,3 +32,7 @@ RUN . ~/miniconda3/bin/activate \
 RUN . ~/miniconda3/bin/activate \
     && pip install git+https://github.com/facebookresearch/xformers.git
 
+# Install ffmpeg
+RUN ~/miniconda3/bin/conda install -c conda-forge x264=='1!161.3030' ffmpeg=4.4.0 \
+    && export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1 \
+    && ~/miniconda3/bin/conda install cryptography
