@@ -3,7 +3,7 @@ FROM nvidia/cuda:11.6.2-devel-ubuntu20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update \
-    && apt-get install -y wget git curl python3-pip
+    && apt-get install -y ffmpeg wget git curl python3-pip
 
 # Install conda from this docs -> https://docs.conda.io/projects/miniconda/en/latest/
 RUN mkdir -p ~/miniconda3
