@@ -16,13 +16,9 @@ RUN ~/miniconda3/bin/conda init bash
 RUN ~/miniconda3/bin/conda install -y python=3.10.6
 RUN ~/miniconda3/bin/conda install -y pytorch==1.12.1 torchvision==0.13.1 -c pytorch
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-RUN . ~/miniconda3/bin/activate \
-    && pip install transformers==4.30.2 diffusers --retries 20
-
 
 RUN . ~/miniconda3/bin/activate \
     && pip install git+https://github.com/huggingface/transformers
-
 
 COPY ./req.txt /requirements/req.txt
 RUN . ~/miniconda3/bin/activate \
