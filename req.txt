@@ -20,7 +20,7 @@ backoff==1.10.0
 basicsr==1.4.2
 bcrypt==4.0.0
 beautifulsoup4==4.11.1
-bitsandbytes @ https://github.com/jllllll/bitsandbytes-windows-webui/releases/download/wheels/bitsandbytes-0.41.1-py3-none-win_amd64.whl
+# bitsandbytes @ https://github.com/jllllll/bitsandbytes-windows-webui/releases/download/wheels/bitsandbytes-0.41.1-py3-none-win_amd64.whl
 blendmodes==2022
 boltons==23.0.0
 cachetools==5.2.0
