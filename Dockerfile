@@ -14,7 +14,7 @@ RUN ~/miniconda3/bin/conda init bash
 
 # Install python and stablediffusion
 RUN ~/miniconda3/bin/conda install -y python=3.10.6
-RUN ~/miniconda3/bin/conda install -y pytorch==1.12.1 torchvision==0.13.1 -c pytorch
+RUN ~/miniconda3/bin/conda install -y pytorch==2.1.0 torchvision==0.16.0 -c pytorch
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 RUN . ~/miniconda3/bin/activate \
