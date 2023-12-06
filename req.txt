@@ -78,7 +78,7 @@ httpx==0.23.0
 huggingface-hub==0.17.3
 humanfriendly==10.0
 idna==2.10
-imageio==2.31.6
+imageio
 imageio-ffmpeg==0.4.9
 importlib-metadata==5.0.0
 importlib-resources==6.1.0
