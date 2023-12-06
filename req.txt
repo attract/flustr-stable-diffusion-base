@@ -152,7 +152,7 @@ pytorch-lightning==1.9.4
 pytorch-optimizer==2.11.1
 pytz==2022.4
 PyWavelets==1.4.1
-pywin32==306
+# pywin32==306
 PyYAML==6.0
 realesrgan==0.3.0
 regex==2022.9.13
