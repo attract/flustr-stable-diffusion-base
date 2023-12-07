@@ -31,4 +31,5 @@ RUN . ~/miniconda3/bin/activate \
 # Install ffmpeg
 RUN ~/miniconda3/bin/conda install -c conda-forge x264=='1!161.3030' ffmpeg=4.4.0 \
     && export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1 \
-    && ~/miniconda3/bin/conda install cryptography
+    && ~/miniconda3/bin/conda install cryptography \
+    && conda install -c conda-forge libiconv
