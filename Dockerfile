@@ -30,6 +30,7 @@ RUN . ~/miniconda3/bin/activate \
     && pip install git+https://github.com/facebookresearch/xformers.git
 
 # Install ffmpeg
-RUN ~/miniconda3/bin/conda install -c conda-forge x264=='1!161.3030' ffmpeg=4.4.0 libiconv \
+RUN . ~/miniconda3/bin/activate \
+    && ~/miniconda3/bin/conda install -c conda-forge x264=='1!161.3030' ffmpeg=4.4.0 libiconv \
     && export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1 \
     && ~/miniconda3/bin/conda install cryptography
