@@ -57,6 +57,12 @@ RUN \
   sed -i 's/in_app_dir = .*/in_app_dir = True/g' /opt/conda/lib/python3.10/site-packages/gradio/routes.py && \
   git config --global --add safe.directory '*'
 
+# Install RQ Worker packages
+RUN pip install -r /docker/req.txt
+
+# FIX FFMPEG (264 codec)
+RUN conda install -y -c conda-forge x264=='1!161.3030' ffmpeg=4.4.0
+
 WORKDIR ${ROOT}
 ENV NVIDIA_VISIBLE_DEVICES=all
 ENV CLI_ARGS=""
